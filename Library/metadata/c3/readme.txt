@@ -1,0 +1,1 @@
+Just because SVN doesn't like empty folders
