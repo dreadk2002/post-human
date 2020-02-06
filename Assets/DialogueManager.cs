@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue conversation)
     {
-        animator.SetBool("IsOpen", true);
+        animator.SetBool("isOpen", true);
         nameText.text = conversation.name;
 
         sentences.Clear();
