@@ -5,27 +5,28 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-
-    public Text nameText;
-    public Text dialogueText;
-
-    public Animator animator;
-
+    public Dialogue[] conversations;
     private Queue<string> sentences;
+    private int index = 0;
+    public Text nameText, dialogueText;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        DialogueTrigger dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        conversations = dialogueTrigger.conversations;
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue conversation)
     {
         animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;
+        nameText.text = conversation.name;
 
         sentences.Clear();
-        foreach (string sentence in dialogue.sentences) {
+        
+        foreach (string sentence in conversations[index].sentences) {
             sentences.Enqueue(sentence);
         }
 
@@ -57,6 +58,20 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        index++;
+        if (index < conversations.Length)
+        {
+            StartDialogue(conversations[index]);
+            return;
+        } else
+        {
+            Debug.Log("End of dialogue.");
+            animator.SetBool("isOpen", false);
+        }
+    }
+
+    public void setIndex(int index)
+    {
+        this.index = index;
     }
 }
