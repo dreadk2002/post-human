@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8df4dae57dff84ba10924f8d10188b, type: 3}
+  m_Name: Morgan vs Anderson
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: 4da7d62c0080f8545b45ccb5878c27c9, type: 2}
+  speakerRight: {fileID: 11400000, guid: 679305b710b2b7c4494cae2493e34f99, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: 4da7d62c0080f8545b45ccb5878c27c9, type: 2}
+    text: With us is presumtive Presidential nominee, Senator Morgan, for his first
+      major interview since sweeping the Super Tuesday primary contests less than
+      twenty-four hours ago. Congratulations on your victories, Senator and for locking
+      down the nomination so quickly.
+  - character: {fileID: 11400000, guid: 679305b710b2b7c4494cae2493e34f99, type: 2}
+    text: Thank you very much, Anderson.
+  - character: {fileID: 11400000, guid: 4da7d62c0080f8545b45ccb5878c27c9, type: 2}
+    text: Now that your opponents have suspended their campaigns, are you surprised
+      at all with how quickly you've managed to dispatch your competition? You were,
+      after all, facing two candidates that were far better funded than yourself
+      throughout most of the early primary season. Yet here we are in the middle
+      of March, and you're already uncontested and headed for the general election.
